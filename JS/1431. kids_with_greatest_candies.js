@@ -1,16 +1,15 @@
 var kidsWithCandies = function (candies, extraCandies) {
-    const maxCandies = Math.max(...candies);
-    let result = [];
-    console.log(maxCandies);
-    for (let i in candies) {
-        let candi = candies[i] + extraCandies;
-        if (candi >= maxCandies) {
-            result.push(true);
-        } else {
-            result.push(false);
-        }
+  const maxCandies = Math.max(...candies);
+  let result = [];
+  for (let i in candies) {
+    let candi = candies[i] + extraCandies;
+    if (candi >= maxCandies) {
+      result.push(true);
+    } else {
+      result.push(false);
     }
-    console.log(result);
+  }
+  console.log(result);
 };
 kidsWithCandies([4, 2, 1, 1, 2], 1);
 

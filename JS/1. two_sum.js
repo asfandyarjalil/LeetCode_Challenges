@@ -1,16 +1,15 @@
-var twoSum = function (nums, target) {
-    const myObj = {};
+function twoSum(nums, target) {
     for (let i = 0; i < nums.length; i++) {
-        const complement = target - nums[i];
-        console.log(myObj.hasOwnProperty(complement));
-        if (myObj.hasOwnProperty(complement)) {
-            return [myObj[complement], i];
+        for (let j = i + 1; j < nums.length; j++) {
+            if (nums[i] + nums[j] === target) {
+                return [i, j];
+            }
         }
-
-        myObj[nums[i]] = i;
     }
-};
-const numsArray = [2, 7, 11, 15];
-const targetToFind = 9;
-let res = twoSum(numsArray, targetToFind);
-console.log(res);
+    throw new Error('No two sum solution found');
+}
+
+// Example Usage:
+const nums = [3, 2, 4];
+const target = 6;
+console.log(twoSum(nums, target));

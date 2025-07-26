@@ -17,25 +17,20 @@
 //   return this.printList();
 // }
 
-function ListNode(val, next) {
-  this.val = val === undefined ? 0 : val;
-  this.next = next === undefined ? null : next;
-}
-
 var reverseList = function (head) {
-  let prev = null;
-  let cur = head;
-  let tmp;
-  let tmpNext;
-  while (cur !== null) {
-    tmp = cur;
-    tmpNext = cur.next;
-    cur.next = prev;
-    prev = tmp;
-    cur = tmpNext;
-  }
+    let prev = null;
+    let cur = head;
+    let tmp;
+    let tmpNext;
+    while (cur !== null) {
+        tmp = cur;
+        tmpNext = cur.next;
+        cur.next = prev;
+        prev = tmp;
+        cur = tmpNext;
+    }
 
-  return prev;
+    return prev;
 };
 let node = new ListNode(2, null);
 let res = reverseList(node);

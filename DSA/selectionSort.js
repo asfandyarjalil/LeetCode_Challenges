@@ -33,6 +33,7 @@ function selectionSort(arr) {
     }
     return arr;
 }
+
 let arr = [6, 5, 3, 4, 7, 8];
 
 let resp = selectionSort(arr);

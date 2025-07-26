@@ -1,10 +1,11 @@
 function longestCommonPrefix(strs) {
     if (strs.length === 0) {
-        return ""; // If the array is empty, return an empty string
+        return '';
     }
 
-    const firstWord = strs[0]; // Get the first word in the array
-    let commonPrefix = ""; // Initialize an empty string to store the common prefix
+    const firstWord = strs[0];
+    
+    let commonPrefix = '';
 
     // Loop through the characters of the first word
     for (let i = 0; i < firstWord.length; i++) {
@@ -15,7 +16,7 @@ function longestCommonPrefix(strs) {
             const currentWord = strs[j];
 
             // If the current character doesn't match or the index is beyond the length of current word
-            if (i >= currentWord.length || currentWord[i] !== currentChar) {
+            if (currentWord[i] !== currentChar) {
                 return commonPrefix; // Return the common prefix found so far
             }
         }
@@ -28,8 +29,9 @@ function longestCommonPrefix(strs) {
 }
 
 // Example usage:
-const example1 = ["flower", "flow", "flight"];
+const example1 = ['flower', 'flow', 'flight'];
 console.log(longestCommonPrefix(example1)); // Output: "fl"
 
-const example2 = ["dog", "racecar", "car"];
+const example2 = ['dog', 'racecar', 'car'];
 console.log(longestCommonPrefix(example2)); // Output: ""
+0;

@@ -24,13 +24,13 @@ var romanToInt = function (s) {
 function romanToInteger(s) {
     // Create a map to associate Roman numerals with their values
     const symbolValues = new Map([
-        ["I", 1],
-        ["V", 5],
-        ["X", 10],
-        ["L", 50],
-        ["C", 100],
-        ["D", 500],
-        ["M", 1000],
+        ['I', 1],
+        ['V', 5],
+        ['X', 10],
+        ['L', 50],
+        ['C', 100],
+        ['D', 500],
+        ['M', 1000],
     ]);
 
     console.log(symbolValues);
@@ -55,4 +55,4 @@ function romanToInteger(s) {
     return result;
 }
 
-console.log(romanToInteger("MCM"));
+console.log(romanToInteger('MCM'));

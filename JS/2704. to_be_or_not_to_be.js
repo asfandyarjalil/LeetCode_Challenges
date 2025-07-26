@@ -14,3 +14,5 @@ function expect(val) {
         },
     };
 }
+
+expect(5).toBe(5); // true
